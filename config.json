@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "version": 3,
+    "flow": "Chip"
+  },
+  "DESIGN_NAME": "chip_top",
+  "PDK": "sky130A",
+  "VERILOG_FILES": [
+    "dir::chip_top.v",
+    "dir::pwd_controller.v"
+  ],
+  "PNR_SDC_FILE": "dir::chip_top.sdc",
+  "SIGNOFF_SDC_FILE": "dir::chip_top.sdc",
+  "CLOCK_PORT": "clk_pad",
+  "CLOCK_PERIOD": 20.0,
+  "RUN_LINTER": false,
+
+  "FP_SIZING": "absolute",
+  "DIE_AREA": [0, 0, 1200, 1200],
+  "CORE_AREA": [300, 300, 900, 900],
+  "PL_TARGET_DENSITY_PCT": 25,
+
+  "EXTRA_VERILOG_MODELS": [
+    "dir::sky130_io_blackbox.v"
+  ],
+  "EXTRA_LEFS": [
+    "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_fd_io.lef",
+    "pdk_dir::libs.ref/sky130_fd_io/lef/sky130_ef_io.lef"
+  ],
+  "EXTRA_GDS": [
+    "pdk_dir::libs.ref/sky130_fd_io/gds/sky130_fd_io.gds",
+    "pdk_dir::libs.ref/sky130_fd_io/gds/sky130_ef_io.gds"
+  ],
+
+  "PAD_CFG": "dir::pad_cfg.tcl"
+}
