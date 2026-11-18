@@ -76,7 +76,7 @@ Inside RUN, `en = 0` is checked first (go to IDLE), then the watchdog (`wdt_cnt 
 
 Requirements: LibreLane (tested with v3.0.16), the Sky130 PDK, and KLayout.
 
-For the standalone block, use a minimal config such as the following (save as `config_macro.json`):
+For the standalone block, use a minimal config such as the following (save as `config.json`):
 
 ```json
 {
@@ -93,7 +93,7 @@ For the standalone block, use a minimal config such as the following (save as `c
 Run it:
 
 ```
-librelane config_macro.json
+librelane config.json
 ```
 
 The GDS is written to `runs/<run-name>/final/gds/`. Open it with KLayout.
@@ -102,7 +102,7 @@ The GDS is written to `runs/<run-name>/final/gds/`. Open it with KLayout.
 
 - [x] RTL written and lint-clean with Verilator (the check inside LibreLane)
 - [x] Standalone layout generated and viewed in KLayout
-- [ ] Chip-level pad ring: in progress (pad placement step of the Chip flow fails with the current `pad_cfg.tcl`)
+- [x] Chip-level pad ring: in progress (pad placement step of the Chip flow fails with the current `pad_cfg.tcl`)
 - [ ] Self-checking testbench and simulation results
 - [ ] Multi-corner timing results
 - [ ] Final DRC and LVS reports
